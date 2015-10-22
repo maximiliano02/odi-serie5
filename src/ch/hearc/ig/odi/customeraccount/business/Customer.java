@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Customer {
 
-	private List<Account> accounts;
+	private Map<String,Account> accounts;
 	private int number;
 	private String firstName;
 	private String lastName;
@@ -20,21 +20,18 @@ public class Customer {
             this.firstName = firstName;
             this.lastName = lastName;
             
-            this.accounts = new ArrayList();
+            this.accounts = new HashMap<>();
         }
 
 	/**
 	 * 
 	 * @param number
 	 */
-	/*public Account getAccountByNumber(String number) {
-            for(Account account : accounts){
-                // TODO recherche du bon compte et retour
-                if (account.) {
-                    
-                }
-            }
-	}*/
+	public Account getAccountByNumber(String number) {
+      
+      return accounts.get(number);
+      
+	}
 
 	/**
 	 * 
